@@ -22,7 +22,7 @@ import { S3Module } from './s3/s3Service.module';
         username: configService.get('PG_USERNAME'),
         password: configService.get<string>('PG_PASSWORD'),
         database: configService.get('PG_DATABASE'),
-        schema: configService.get('PG_SCHEMA'),
+        //schema: configService.get('PG_SCHEMA'),
         models: [Phonebook],
       }),
       inject: [ConfigService],
