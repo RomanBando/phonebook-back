@@ -1,0 +1,49 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateContactDto {
+  address: String
+  firstName: String!
+  lastName: String!
+  name: String!
+  nickname: String
+  phoneNumber: [String]
+  photo: String
+  photoFilter: String
+}
+
+type Mutation {
+  createContact(input: CreateContactDto!): String!
+  getUploadUrl: String!
+  removeContact(id: String!): String!
+  updateContact(input: UpdateContactDto!): String!
+}
+
+type Phonebook {
+  address: String
+  firstName: String!
+  id: String!
+  lastName: String!
+  name: String!
+  nickname: String
+  phoneNumber: [String]
+  photo: String
+  photoFilter: String
+}
+
+type Query {
+  findContacts(search: String): [Phonebook!]!
+}
+
+input UpdateContactDto {
+  address: String
+  firstName: String
+  id: String!
+  lastName: String
+  name: String
+  nickname: String
+  phoneNumber: [String]
+  photo: String
+  photoFilter: String
+}
